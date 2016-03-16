@@ -25,7 +25,7 @@
           <Property Name="TAX" Type="numeric" Precision="5" Scale="2" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="100" />
           <Property Name="PartyCode" Type="int" Nullable="false" />
-          <Property Name="QuantityType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="QuantityType" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Purchase">
           <Key>
@@ -208,7 +208,7 @@
           <NavigationProperty Name="Party" Relationship="Self.FK_Product_ToParty" FromRole="Product" ToRole="Party" />
           <NavigationProperty Name="PurchaseItems" Relationship="Self.FK_PurchaseItem_ToProduct" FromRole="Product" ToRole="PurchaseItem" />
           <NavigationProperty Name="SaleItems" Relationship="Self.FK_SaleItem_ToProduct" FromRole="Product" ToRole="SaleItem" />
-          <Property Name="QuantityType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="QuantityType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Purchase">
           <Key>
