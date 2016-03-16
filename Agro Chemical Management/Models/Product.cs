@@ -11,7 +11,7 @@ namespace Agro_Chemical_Management.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,10 +22,14 @@ namespace Agro_Chemical_Management.Models
         }
     
         public int ProductCode { get; set; }
+        [Display(Name = "Product Name")]
         public string Name { get; set; }
-        public Nullable<decimal> TAX { get; set; }
+        public decimal TAX { get; set; }
         public string Description { get; set; }
+        [Display(Name = "Party")]
         public int PartyCode { get; set; }
+        [Display(Name = "Quantity Type")]
+        public string QuantityType { get; set; }
     
         public virtual Party Party { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

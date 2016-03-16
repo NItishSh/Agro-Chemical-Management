@@ -11,7 +11,7 @@ namespace Agro_Chemical_Management.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class Purchase
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,10 +21,15 @@ namespace Agro_Chemical_Management.Models
         }
     
         public int PurchaseId { get; set; }
+        [Display(Name = "Invoice Number")]
         public string InvoiceNumber { get; set; }
+        [Display(Name = "Date")]
         public System.DateTime PurchaseDate { get; set; }
+        [Display(Name = "Party Name")]
         public int PartyCode { get; set; }
+        [Display(Name = "Grand Total")]
         public decimal TotalPurchaseValue { get; set; }
+        [Display(Name = "Bill Type")]
         public bool BillType { get; set; }
         public string Opertator { get; set; }
     

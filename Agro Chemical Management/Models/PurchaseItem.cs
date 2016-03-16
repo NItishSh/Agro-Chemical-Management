@@ -11,11 +11,13 @@ namespace Agro_Chemical_Management.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class PurchaseItem
     {
         public int Id { get; set; }
+        [Display(Name = "Invoice Number")]
         public int PurchaseID { get; set; }
+        [Display(Name = "Product Name")]
         public int ProductCode { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }

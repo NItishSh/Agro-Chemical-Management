@@ -11,7 +11,7 @@ namespace Agro_Chemical_Management.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class Party
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,9 +22,13 @@ namespace Agro_Chemical_Management.Models
         }
     
         public int PartyCode { get; set; }
+        [Display(Name = "Party Name")]
         public string Name { get; set; }
+        [Display(Name = "Address")]
         public string Address { get; set; }
+        [Display(Name = "Contact Number")]
         public string ContactNumber { get; set; }
+        [Display(Name = "TIN Number")]
         public string TinNumber { get; set; }
         public string Description { get; set; }
     

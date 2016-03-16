@@ -11,7 +11,7 @@ namespace Agro_Chemical_Management.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
     public partial class Sale
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,10 +21,15 @@ namespace Agro_Chemical_Management.Models
         }
     
         public int SaleId { get; set; }
+        [Display(Name = "Customer Name")]
         public string CustomerName { get; set; }
+        [Display(Name = "Customer Address")]
         public string CustomerAddress { get; set; }
+        [Display(Name = "Date")]
         public System.DateTime SaleDate { get; set; }
+        [Display(Name = "Grand Total")]
         public decimal TotalSaleValue { get; set; }
+        [Display(Name = "Sale Type")]
         public bool SaleType { get; set; }
         public string Operator { get; set; }
     
